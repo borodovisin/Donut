@@ -48,7 +48,7 @@ const getMetric = params => {
 
 export const getData = data => data.map(datum => {
     const data = { name: _.first(datum.group), datum, itemStyle: { color: controller.getColorAccessor().color(datum) } }
-    if (datum.current.metrics) {
+    if (_.isObject(datum.current.metrics)) {
         data.value = getValueFromMetric(datum.current.metrics);
     } else data.value = datum.current.count;
     return data;

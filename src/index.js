@@ -42,7 +42,7 @@ const option = {
         {
             type:'pie',
             radius: ['30%', '50%'],
-            hoverOffset: 1,
+            hoverOffset: 3,
             label: {
                 color: '#000',
                 formatter: params => `${params.name} | ${controller.dataAccessors['Size'].format(params.value)} (${params.percent}%)`,
